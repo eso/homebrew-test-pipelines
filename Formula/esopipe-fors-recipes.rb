@@ -16,11 +16,11 @@ class EsopipeForsRecipes < Formula
 
   depends_on "pkgconf" => :build
   depends_on "cfitsio"
-  depends_on "cpl@7.3.2"
-  depends_on "erfa"
-  depends_on "esorex"
+  depends_on "eso/pipelines/cpl@7.3.2"
+  depends_on "eso/pipelines/erfa"
+  depends_on "eso/pipelines/esorex"
+  depends_on "eso/pipelines/telluriccorr"
   depends_on "gsl"
-  depends_on "telluriccorr"
 
   uses_from_macos "curl"
 
