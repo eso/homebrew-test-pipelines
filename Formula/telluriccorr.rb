@@ -10,6 +10,14 @@ class Telluriccorr < Formula
     regex(/href=.*?telluriccorr[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/eso/homebrew-test-pipelines/releases/download/telluriccorr-4.3.3"
+    sha256 arm64_sequoia: "8c5a81cdc79d206c13ba62e6ad412524f55b3f4d1347956f5a221ad19fd3f6bd"
+    sha256 arm64_sonoma:  "4b42de653b8c82db934bc956daa601dea279b32cd3cfe6ac120df8863c41190a"
+    sha256 ventura:       "cd2358ba9f91450fcdc7b200aedf84fd4270fb44456ade4ca0c15546da73cf96"
+    sha256 x86_64_linux:  "39dd34d0de8d77432a5fbfff2f355e57569c378e987767da0fed263e80991f7f"
+  end
+
   depends_on "cpl@7.3.2"
   depends_on "molecfit-third-party"
 
