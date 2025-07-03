@@ -10,6 +10,14 @@ class Erfa < Formula
     regex(/href=.*?erfa[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/eso/homebrew-test-pipelines/releases/download/erfa-2.0.1"
+    sha256 cellar: :any,                 arm64_sequoia: "7aae0fc2bb911b2c43caac7f442d16be8c2ee964ef41793355f35718bacd7add"
+    sha256 cellar: :any,                 arm64_sonoma:  "1ea494f56568b77fb71b1b83cd9744cd003562002542becd891c0277ad7becb1"
+    sha256 cellar: :any,                 ventura:       "3f7792b2a6dd7289162fc8af3d86a9b860256f8167ad7ec45c641bbaeb73d8ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f4aac6c3a7b8027a4b1f35dbc1d6ad862f8d47f41cd9bb891ec1a68ddf396747"
+  end
+
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
