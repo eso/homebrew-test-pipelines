@@ -10,6 +10,14 @@ class CplAT732 < Formula
     regex(/href=.*?cpl[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/eso/homebrew-test-pipelines/releases/download/cpl@7.3.2-7.3.2"
+    sha256 cellar: :any,                 arm64_sequoia: "0568f275dc6932077a1c67e98b7087539276158594c5bfa0931130315e7049e8"
+    sha256 cellar: :any,                 arm64_sonoma:  "3a3d5d00264db95f88884539b5e345765af86e077a08b35cce9472bd97b26bd5"
+    sha256 cellar: :any,                 ventura:       "f082ba2e2333cdde40106db7f2a44216fda34599da0a5bef44e3bd9023db637c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "291ee4ae5d1abfe5821b1dc3511698319b9551823e12f298fa4247476042202e"
+  end
+
   keg_only :versioned_formula
 
   depends_on "cfitsio"
