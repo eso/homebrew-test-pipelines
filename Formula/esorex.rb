@@ -10,6 +10,14 @@ class Esorex < Formula
     regex(/href=.*?esorex[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/eso/homebrew-test-pipelines/releases/download/esorex-3.13.10"
+    sha256 arm64_sequoia: "954d9fdb581fe4740e6de4d889219e53fbc20af2daaac54a1396c1e4a9820041"
+    sha256 arm64_sonoma:  "b91bea1b5a2d4262a7f5d6d4579a9e804fb0f31632a0371a117f543646ef9944"
+    sha256 ventura:       "14b6f5616829baf4d1fec3fdd584a7fb9672d7ccfc33a853f0c6827e7a570771"
+    sha256 x86_64_linux:  "977a459b043b299987b70c20c4ba7b653085da815412f0c39cb8e700296ac5b3"
+  end
+
   depends_on "cpl@7.3.2"
   depends_on "gsl"
   depends_on "libffi"
